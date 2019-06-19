@@ -333,7 +333,7 @@ select to_date(o.order_date),
 group by to_date(o.order_date);
 
 ```
-
+### B-2 result
 ![](problem11_sol3.PNG)
 
 ## C. Calculating the order Total – Which ten orders had the highest total dollar amounts?
@@ -352,4 +352,5 @@ select o.order_id,
  order by total desc
  limit 10;       
 ```
+### C-2 result
 ![](problem11_sol4.PNG)
