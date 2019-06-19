@@ -352,5 +352,4 @@ select o.order_id,
  order by total desc
  limit 10;       
 ```
-
 ![](problem11_sol4.png)
