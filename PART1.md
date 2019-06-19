@@ -404,4 +404,6 @@ sqoop import --connect jdbc:mysql://127.0.0.1/test --table posts --fields-termin
 
 ```
 
+# Impala 서비스 설치
 
+![](impala.PNG)
