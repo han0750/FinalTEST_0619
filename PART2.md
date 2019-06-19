@@ -18,7 +18,7 @@ where status='Active'
 and a.type = w.type
 
 ```
-![](problem1_sol.png)
+![](problem1_sol.PNG)
 
 
 ## 2. hive command execute
@@ -26,11 +26,11 @@ and a.type = w.type
 ```
 hive --database problem1 -f solution.sql
 ```
-![](problem1.png)
+![](problem1.PNG)
 
 ## 3. execute in hue web ui 
 
-![](problem1_sol2.png)
+![](problem1_sol2.PNG)
 
 
 # Problem2 
@@ -60,7 +60,7 @@ hireday STRING)
 
 ## 2. execute in hue web ui
 
-![](problem2_sol2.png)
+![](problem2_sol2.PNG)
 
 
 # Problem3 
@@ -75,7 +75,7 @@ create external table solution
   hpnone string)
  ;
 ```
-![](problem3_sol1.png)
+![](problem3_sol1.PNG)
 
 ## 2. Insert data
 
@@ -87,7 +87,7 @@ from account a,
 where a.custid = c.id
 and a.amount < 0 
 ```
-![](problem3_sol2.png)
+![](problem3_sol2.PNG)
 
 ## 3. result
 
@@ -95,7 +95,7 @@ and a.amount < 0
 select * from solution
 limit 10;
 ```
-![](problem3_sol3.png)
+![](problem3_sol3.PNG)
 
 
 # Problem4 
@@ -132,7 +132,7 @@ from employee e
 where e.city = 'Palo Alto'
 and   e.state = 'CA'
 ```
-![](problem5_sol1.png)
+![](problem5_sol1.PNG)
 
 ## 2. hive command execute
 
@@ -140,7 +140,7 @@ and   e.state = 'CA'
 training/problem5 로 이동
 hive --database problem5 -f solution.sql
 ```
-![](problem5_sol2.png)
+![](problem5_sol2.PNG)
 
 
 # Problem6 
@@ -175,7 +175,7 @@ select id,
        substr(birthday,1,5)
 from employee;
 ```
-![](problem6_sol.png)
+![](problem6_sol.PNG)
 
 # Problem7 
 
@@ -185,7 +185,7 @@ select concat(fname,' ' , lname)
 from employee e
 where e.city = 'Seattle'
 ```
-![](problem7_sol1.png)
+![](problem7_sol1.PNG)
 
 ## 2. hive command execute 
 
@@ -194,7 +194,7 @@ local problem7 폴더에 solution.sql 저장 후
 hive command 수행 
 hive --database problem7 -f solution.sql
 ```
-![](problem7_sol2.png)
+![](problem7_sol2.PNG)
 
 
 
@@ -212,7 +212,7 @@ sqoop export \
 --fields-terminated-by "\t" \
 --columns "id, fname , lname , address , city, state , zip , birthday" ;
 ```
-![](problem8_sol1.png)
+![](problem8_sol1.PNG)
 
 ## 2. TABLE Select 결과
 
@@ -223,7 +223,7 @@ $ mysql -u cloudera -p
 > use problem8;
 > select * from solution limit 10;
 ```
-![](problem8_sol2.png)
+![](problem8_sol2.PNG)
 
 
 # Problem9 
@@ -244,7 +244,7 @@ create external table solution
  birthday string
 );
 ```
-![](problem9_sol1.png)
+![](problem9_sol1.PNG)
 
 ## 2. Insert data & check
 
@@ -262,7 +262,7 @@ from customer;
 
 select* from solution limit 10;
 ```
-![](problem9_sol2.png)
+![](problem9_sol2.PNG)
 
 # Problem10
 
@@ -281,7 +281,7 @@ from customer c ,
 where c.id = b.id 
 ;
 ```
-![](problem10_sol1.png)
+![](problem10_sol1.PNG)
 
 ## 2. Check data 
 ```
@@ -289,7 +289,7 @@ select *
 from solution 
 limit 10;
 ```
-![](problem10_sol2.png)
+![](problem10_sol2.PNG)
 
 # Problem11
 
@@ -306,7 +306,7 @@ group by p.name
 limit 3 ;
 
 ```
-![](problem11_sol1.png)
+![](problem11_sol1.PNG)
 
 
 ### A-2. Hive command execute
@@ -314,7 +314,7 @@ limit 3 ;
 ```
 hive --database default -f solution.sql
 ```
-![](problem11_sol2.png)
+![](problem11_sol2.PNG)
 
 ## B. Calculating Revenue and Profit – write a query to show Dualcore’s revenue (total price of products sold) and profit (price minus cost) by date.
 
@@ -334,7 +334,7 @@ group by to_date(o.order_date);
 
 ```
 
-![](problem11_sol3.png)
+![](problem11_sol3.PNG)
 
 ## C. Calculating the order Total – Which ten orders had the highest total dollar amounts?
 
@@ -352,4 +352,4 @@ select o.order_id,
  order by total desc
  limit 10;       
 ```
-![](problem11_sol4.png)
+![](problem11_sol4.PNG)
